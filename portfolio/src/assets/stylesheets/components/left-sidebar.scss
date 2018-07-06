@@ -13,25 +13,6 @@ $animation-duration: 0.5s;
   &.minimized {
     max-width: 100px;
 
-    .inner {
-      .user-profile {
-        border-bottom: 1px solid #1a233d;
-        max-height: 130px;
-
-        .user-image {
-          margin: 25px 0;
-          img {
-            width: 75px;
-          }
-        }
-      .user-info {
-        height: 0px;
-        transition-delay: 0s;
-        animation: animate-sidebar-text $animation-duration;
-      }
-     }
-    }
-
     .toggle-button svg {
         transform: rotate(180deg);
       }
@@ -68,11 +49,4 @@ $animation-duration: 0.5s;
   i::before {
     transition: all $animation-duration / 2;
   }
-}
-
-
-/* Animation */
-@keyframes animate-sidebar-text {
-  0% {}
-  100% { opacity: 0; margin-top: -5px;}
 }

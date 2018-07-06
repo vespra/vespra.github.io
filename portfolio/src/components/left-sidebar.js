@@ -20,7 +20,7 @@ const LeftSidebar = class extends React.Component {
   componentWillUnmount() {}
 
   toggleMenu() {
-    this.setState({ showMenu: !this.state.showMenu })
+    this.setState(prevState => ({ showMenu: !prevState.showMenu }));
   }
 
   render() {
@@ -31,7 +31,7 @@ const LeftSidebar = class extends React.Component {
     return (
       <div className= {sideBarClasses}>
         <div className="inner">
-          <UserProfile></UserProfile>
+          <UserProfile showMenu={this.state.showMenu}></UserProfile>
         </div>
         <div className="toggle-button" onClick={this.toggleMenu.bind(this)}><FaAngleLeft /></div>
       </div>

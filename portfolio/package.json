@@ -14,6 +14,8 @@
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-sass": "^1.0.26",
     "gatsby-plugin-typography": "^1.7.19",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
     "react-icons": "^2.2.7",
     "typography-theme-bootstrap": "^0.16.7",
     "typography-theme-lawton": "^0.15.10"

@@ -4,13 +4,16 @@ import styles from "../assets/stylesheets/components/user-profile.scss";
 
 var FaMapMarker = require('react-icons/lib/fa/map-marker');
 
+const user =  {
+  name: 'Daniela Desira',
+  title: 'Front End Developer',
+  location: 'Malta',
+  image: 'https://gravatar.com/avatar/de84db04b0c7b43efdc840391ffe56ff'
+};
+
 const UserProfile = class extends React.Component {
   constructor(props) {
     super(props);
-    /*this.state = {
-      showMenu: true
-    }
-    this.toggleMenu = this.toggleMenu.bind(this);*/
   }
 
   componentDidMount() {}
@@ -19,20 +22,19 @@ const UserProfile = class extends React.Component {
 
   render() {
     var userProfileClasses = classNames({
-      "user-profile": true
+      "user-profile": true,
+      "minimized": !this.props.showMenu
     })
     return (
       <div className={userProfileClasses}>
         <div className={"user-background"}></div>
         <div className={"user-image"}>
-          <img src="https://gravatar.com/avatar/de84db04b0c7b43efdc840391ffe56ff" />
+          <img src={user.image} />
         </div>
         <div className={"user-info"}>
-          <p className={"user-name"}>Daniela Desira</p>
-          <p className={"user-title"}>Front End Developer</p>
-          <p className={"user-location"}>
-            <FaMapMarker /> Malta
-          </p>
+          <p className={"user-name"}>{user.name}</p>
+          <p className={"user-title"}>{user.title}</p>
+          <p className={"user-location"}><FaMapMarker />{user.location}</p>
         </div>
       </div>
    )

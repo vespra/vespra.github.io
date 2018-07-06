@@ -62,4 +62,28 @@ $animation-duration: 0.5s;
       }
     }
   }
+
+  &.minimized {
+    border-bottom: 1px solid #1a233d;
+    max-height: 130px;
+
+    .user-image {
+      margin: 25px 0;
+      img {
+        width: 75px;
+      }
+    }
+
+    .user-info {
+      height: 0px;
+      transition-delay: 0s;
+      animation: animate-sidebar-text $animation-duration;
+    }
+  }
+}
+
+/* Animation */
+@keyframes animate-sidebar-text {
+  0% {}
+  100% { opacity: 0; margin-top: -5px;}
 }
