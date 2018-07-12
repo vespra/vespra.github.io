@@ -78,7 +78,7 @@ $animation-duration: 0.5s;
   margin-bottom: 20px;
 
   .backgroundImage {
-     background: url('https://images.wallpapersden.com/image/wxl-desert-nights-moon-5k-minimalism_57965.jpg');
+    background: url('https://images.wallpapersden.com/image/wxl-desert-nights-moon-5k-minimalism_57965.jpg');
     background-size: cover;
     background-position: 100% 100%;
     width: 100%;
@@ -97,6 +97,9 @@ $animation-duration: 0.5s;
       height: 100%;
 
     }
+  }
+  .info {
+    width: 100%;
   }
 
   .countdown {

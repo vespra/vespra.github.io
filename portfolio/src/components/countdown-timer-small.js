@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 import styles from "../assets/stylesheets/components/countdown-timer.scss";
 
-const CountdownTimer = class extends React.Component {
+const CountdownTimerSmall = class extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -75,11 +75,9 @@ const CountdownTimer = class extends React.Component {
   render() {
     const countDown = this.state;
     return (
-      <div className={"countdown-timer-large"}>
+      <div className="countdown-timer-small">
+        <div className="backgroundImage"></div>
         <div className="info">
-          <div className="header">
-            <h2>Stay Tuned</h2>
-          </div>
           <div className="countdown">
             <div>
               <p>{this.addLeadingZeros(countDown.days)}</p>
@@ -99,17 +97,18 @@ const CountdownTimer = class extends React.Component {
             </div>
           </div>
         </div>
+        <div className="animated-clock-face"></div>
       </div>
     )
   }
 };
 
-CountdownTimer.propTypes = {
+CountdownTimerSmall.propTypes = {
   date: PropTypes.string.isRequired
 };
 
-CountdownTimer.defaultProps = {
+CountdownTimerSmall.defaultProps = {
   date: new Date()
 };
 
-export default CountdownTimer;
+export default CountdownTimerSmall;
