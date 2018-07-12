@@ -1,0 +1,146 @@
+$background-color: #0a1022;
+$border-color: #1a233d;
+$animation-duration: 0.5s;
+
+.countdown-timer-large {
+  background: url('https://images.wallpapersden.com/image/wxl-desert-nights-moon-5k-minimalism_57965.jpg');
+  background-size: cover;
+  background-position: 50% 100%;
+  width: 400px;
+  height: 305px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  .info {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(72, 64, 111, 0.7), rgba(182, 92, 118, 0.5));
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(72, 64, 111, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .header {
+      padding-top: 10px;
+      h2 {
+        font-weight: 100;
+        text-align: center;
+        color: #cd6c6f;
+        font-size: 2.5rem;
+      }
+    }
+    .countdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+
+      > div {
+        flex-grow: 1;
+        text-align: center;
+
+        p {
+          margin: 0;
+          color: $border-color;
+          font-family: 'Oswald';
+
+          &:first-child {
+            font-size: 2rem;
+            line-height: 2rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.countdown-timer-small {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  text-align: left;
+  margin-bottom: 20px;
+
+  .backgroundImage {
+     background: url('https://images.wallpapersden.com/image/wxl-desert-nights-moon-5k-minimalism_57965.jpg');
+    background-size: cover;
+    background-position: 100% 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    &::after {
+      content: '';
+      background: linear-gradient(45deg, rgba(182, 92, 118, 0.2), rgba(72, 64, 111, 1) 80%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+    }
+  }
+
+  .countdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+
+      > div {
+        flex-grow: 1;
+        border-left: 2px solid rgba(255, 255, 255, 0.1);;
+        padding-left: 10px;
+
+        p {
+          margin: 0;
+          color: $border-color;
+          font-family: 'Oswald';
+          text-transform: capitalize;
+
+          &:first-child {
+            font-size: 2rem;
+            color: #fff;
+            line-height: 2rem;
+          }
+        }
+      }
+    }
+
+  .animated-clock-face {
+    background: url('https://pre00.deviantart.net/efbc/th/pre/i/2015/168/e/8/clock_face_9_by_stephenjohnsmith-d8xmnem.png');
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -50%;
+    right: -28%;
+    background-size: cover;
+    transform-origin: 50% 50%;
+    animation: animatedClock 30s infinite;
+    transition-timing-function: linear;
+   }
+}
+
+@keyframes animatedClock {
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
+}

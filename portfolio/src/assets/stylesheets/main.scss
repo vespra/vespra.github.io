@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Oswald');
+
+$background-color: #0a1022;
+$border-color: #1a233d;
+$animation-duration: 0.5s;
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $background-color;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  overflow: hidden;
+  font-family: 'Maven Pro';
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+
+.main-content {
+  flex-grow: 10;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
